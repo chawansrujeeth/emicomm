@@ -1,0 +1,304 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{86F5DEBC-50F9-4E65-9EED-5102F5EFA7A0}|EmiCommerce\\EmiCommerce.csproj|c:\\users\\rakesh.cheepuru\\onedrive - qentelli\\project\\emicommerce\\emicommerce\\data\\mydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86F5DEBC-50F9-4E65-9EED-5102F5EFA7A0}|EmiCommerce\\EmiCommerce.csproj|solutionrelative:emicommerce\\data\\mydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86F5DEBC-50F9-4E65-9EED-5102F5EFA7A0}|EmiCommerce\\EmiCommerce.csproj|c:\\users\\rakesh.cheepuru\\onedrive - qentelli\\project\\emicommerce\\emicommerce\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86F5DEBC-50F9-4E65-9EED-5102F5EFA7A0}|EmiCommerce\\EmiCommerce.csproj|solutionrelative:emicommerce\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86F5DEBC-50F9-4E65-9EED-5102F5EFA7A0}|EmiCommerce\\EmiCommerce.csproj|c:\\users\\rakesh.cheepuru\\onedrive - qentelli\\project\\emicommerce\\emicommerce\\mapper\\mapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86F5DEBC-50F9-4E65-9EED-5102F5EFA7A0}|EmiCommerce\\EmiCommerce.csproj|solutionrelative:emicommerce\\mapper\\mapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86F5DEBC-50F9-4E65-9EED-5102F5EFA7A0}|EmiCommerce\\EmiCommerce.csproj|c:\\users\\rakesh.cheepuru\\onedrive - qentelli\\project\\emicommerce\\emicommerce\\models\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86F5DEBC-50F9-4E65-9EED-5102F5EFA7A0}|EmiCommerce\\EmiCommerce.csproj|solutionrelative:emicommerce\\models\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86F5DEBC-50F9-4E65-9EED-5102F5EFA7A0}|EmiCommerce\\EmiCommerce.csproj|c:\\users\\rakesh.cheepuru\\onedrive - qentelli\\project\\emicommerce\\emicommerce\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86F5DEBC-50F9-4E65-9EED-5102F5EFA7A0}|EmiCommerce\\EmiCommerce.csproj|solutionrelative:emicommerce\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86F5DEBC-50F9-4E65-9EED-5102F5EFA7A0}|EmiCommerce\\EmiCommerce.csproj|c:\\users\\rakesh.cheepuru\\onedrive - qentelli\\project\\emicommerce\\emicommerce\\repo\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86F5DEBC-50F9-4E65-9EED-5102F5EFA7A0}|EmiCommerce\\EmiCommerce.csproj|solutionrelative:emicommerce\\repo\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86F5DEBC-50F9-4E65-9EED-5102F5EFA7A0}|EmiCommerce\\EmiCommerce.csproj|c:\\users\\rakesh.cheepuru\\onedrive - qentelli\\project\\emicommerce\\emicommerce\\repo\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86F5DEBC-50F9-4E65-9EED-5102F5EFA7A0}|EmiCommerce\\EmiCommerce.csproj|solutionrelative:emicommerce\\repo\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86F5DEBC-50F9-4E65-9EED-5102F5EFA7A0}|EmiCommerce\\EmiCommerce.csproj|c:\\users\\rakesh.cheepuru\\onedrive - qentelli\\project\\emicommerce\\emicommerce\\service\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86F5DEBC-50F9-4E65-9EED-5102F5EFA7A0}|EmiCommerce\\EmiCommerce.csproj|solutionrelative:emicommerce\\service\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86F5DEBC-50F9-4E65-9EED-5102F5EFA7A0}|EmiCommerce\\EmiCommerce.csproj|c:\\users\\rakesh.cheepuru\\onedrive - qentelli\\project\\emicommerce\\emicommerce\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86F5DEBC-50F9-4E65-9EED-5102F5EFA7A0}|EmiCommerce\\EmiCommerce.csproj|solutionrelative:emicommerce\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86F5DEBC-50F9-4E65-9EED-5102F5EFA7A0}|EmiCommerce\\EmiCommerce.csproj|c:\\users\\rakesh.cheepuru\\onedrive - qentelli\\project\\emicommerce\\emicommerce\\jwthelper\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86F5DEBC-50F9-4E65-9EED-5102F5EFA7A0}|EmiCommerce\\EmiCommerce.csproj|solutionrelative:emicommerce\\jwthelper\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86F5DEBC-50F9-4E65-9EED-5102F5EFA7A0}|EmiCommerce\\EmiCommerce.csproj|c:\\users\\rakesh.cheepuru\\onedrive - qentelli\\project\\emicommerce\\emicommerce\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86F5DEBC-50F9-4E65-9EED-5102F5EFA7A0}|EmiCommerce\\EmiCommerce.csproj|solutionrelative:emicommerce\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86F5DEBC-50F9-4E65-9EED-5102F5EFA7A0}|EmiCommerce\\EmiCommerce.csproj|c:\\users\\rakesh.cheepuru\\onedrive - qentelli\\project\\emicommerce\\emicommerce\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86F5DEBC-50F9-4E65-9EED-5102F5EFA7A0}|EmiCommerce\\EmiCommerce.csproj|solutionrelative:emicommerce\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86F5DEBC-50F9-4E65-9EED-5102F5EFA7A0}|EmiCommerce\\EmiCommerce.csproj|c:\\users\\rakesh.cheepuru\\onedrive - qentelli\\project\\emicommerce\\emicommerce\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86F5DEBC-50F9-4E65-9EED-5102F5EFA7A0}|EmiCommerce\\EmiCommerce.csproj|solutionrelative:emicommerce\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86F5DEBC-50F9-4E65-9EED-5102F5EFA7A0}|EmiCommerce\\EmiCommerce.csproj|c:\\users\\rakesh.cheepuru\\onedrive - qentelli\\project\\emicommerce\\emicommerce\\dto\\registeruserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86F5DEBC-50F9-4E65-9EED-5102F5EFA7A0}|EmiCommerce\\EmiCommerce.csproj|solutionrelative:emicommerce\\dto\\registeruserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86F5DEBC-50F9-4E65-9EED-5102F5EFA7A0}|EmiCommerce\\EmiCommerce.csproj|c:\\users\\rakesh.cheepuru\\onedrive - qentelli\\project\\emicommerce\\emicommerce\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{86F5DEBC-50F9-4E65-9EED-5102F5EFA7A0}|EmiCommerce\\EmiCommerce.csproj|solutionrelative:emicommerce\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86F5DEBC-50F9-4E65-9EED-5102F5EFA7A0}|EmiCommerce\\EmiCommerce.csproj|c:\\users\\rakesh.cheepuru\\onedrive - qentelli\\project\\emicommerce\\emicommerce\\emicommerce.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{86F5DEBC-50F9-4E65-9EED-5102F5EFA7A0}|EmiCommerce\\EmiCommerce.csproj|solutionrelative:emicommerce\\emicommerce.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 18,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\Program.cs",
+              "RelativeDocumentMoniker": "EmiCommerce\\Program.cs",
+              "ToolTip": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\Program.cs",
+              "RelativeToolTip": "EmiCommerce\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T10:13:23.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "EmiCommerce\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "EmiCommerce\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAiwCgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T10:12:44.622Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "JwtService.cs",
+              "DocumentMoniker": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\JWTHelper\\JwtService.cs",
+              "RelativeDocumentMoniker": "EmiCommerce\\JWTHelper\\JwtService.cs",
+              "ToolTip": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\JWTHelper\\JwtService.cs",
+              "RelativeToolTip": "EmiCommerce\\JWTHelper\\JwtService.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAwCUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T10:10:41.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\Service\\UserService.cs",
+              "RelativeDocumentMoniker": "EmiCommerce\\Service\\UserService.cs",
+              "ToolTip": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\Service\\UserService.cs",
+              "RelativeToolTip": "EmiCommerce\\Service\\UserService.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAgwEgAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T10:09:26.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\Service\\IUserService.cs",
+              "RelativeDocumentMoniker": "EmiCommerce\\Service\\IUserService.cs",
+              "ToolTip": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\Service\\IUserService.cs",
+              "RelativeToolTip": "EmiCommerce\\Service\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T10:06:25.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\Repo\\UserRepository.cs",
+              "RelativeDocumentMoniker": "EmiCommerce\\Repo\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\Repo\\UserRepository.cs",
+              "RelativeToolTip": "EmiCommerce\\Repo\\UserRepository.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBQAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T09:58:00.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\Repo\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "EmiCommerce\\Repo\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\Repo\\IUserRepository.cs",
+              "RelativeToolTip": "EmiCommerce\\Repo\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T09:57:36.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Mapper.cs",
+              "DocumentMoniker": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\Mapper\\Mapper.cs",
+              "RelativeDocumentMoniker": "EmiCommerce\\Mapper\\Mapper.cs",
+              "ToolTip": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\Mapper\\Mapper.cs",
+              "RelativeToolTip": "EmiCommerce\\Mapper\\Mapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T09:41:45.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\DTO\\UserDto.cs",
+              "RelativeDocumentMoniker": "EmiCommerce\\DTO\\UserDto.cs",
+              "ToolTip": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\DTO\\UserDto.cs",
+              "RelativeToolTip": "EmiCommerce\\DTO\\UserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T09:40:26.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\DTO\\LoginDto.cs",
+              "RelativeDocumentMoniker": "EmiCommerce\\DTO\\LoginDto.cs",
+              "ToolTip": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\DTO\\LoginDto.cs",
+              "RelativeToolTip": "EmiCommerce\\DTO\\LoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T09:37:14.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "RegisterUserDto.cs",
+              "DocumentMoniker": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\DTO\\RegisterUserDto.cs",
+              "RelativeDocumentMoniker": "EmiCommerce\\DTO\\RegisterUserDto.cs",
+              "ToolTip": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\DTO\\RegisterUserDto.cs",
+              "RelativeToolTip": "EmiCommerce\\DTO\\RegisterUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T09:35:35.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EmiCommerce",
+              "DocumentMoniker": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\EmiCommerce.csproj",
+              "RelativeDocumentMoniker": "EmiCommerce\\EmiCommerce.csproj",
+              "ToolTip": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\EmiCommerce.csproj",
+              "RelativeToolTip": "EmiCommerce\\EmiCommerce.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-03T09:33:20.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\appsettings.json",
+              "RelativeDocumentMoniker": "EmiCommerce\\appsettings.json",
+              "ToolTip": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\appsettings.json",
+              "RelativeToolTip": "EmiCommerce\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-03T09:28:30.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserProfile.cs",
+              "DocumentMoniker": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\Models\\UserProfile.cs",
+              "RelativeDocumentMoniker": "EmiCommerce\\Models\\UserProfile.cs",
+              "ToolTip": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\Models\\UserProfile.cs",
+              "RelativeToolTip": "EmiCommerce\\Models\\UserProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T09:28:26.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\Models\\User.cs",
+              "RelativeDocumentMoniker": "EmiCommerce\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\Models\\User.cs",
+              "RelativeToolTip": "EmiCommerce\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T09:28:24.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MyDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\Data\\MyDbContext.cs",
+              "RelativeDocumentMoniker": "EmiCommerce\\Data\\MyDbContext.cs",
+              "ToolTip": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\Data\\MyDbContext.cs",
+              "RelativeToolTip": "EmiCommerce\\Data\\MyDbContext.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAwDkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T09:28:16.605Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
