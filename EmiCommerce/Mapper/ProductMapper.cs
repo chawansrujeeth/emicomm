@@ -9,24 +9,24 @@ namespace EmiCommerce.Mapper
     {
         public static ProductDto MapProductToDto(Product product)
         {
-            if (product == null) return null;
+            if (product == null) return new ProductDto();
             return new ProductDto
             {
                 Id = product.Id,
-                Name = product.Name,
-                Description = product.Description,
+                Name = product.Name ?? string.Empty,
+                Description = product.Description ?? string.Empty,
                 Price = product.Price,
                 Stock = product.Stock
             };
         }
         public static Product MapDtoToProduct(ProductDto dto)
         {
-            if (dto == null) return null;
+            if (dto == null) return new Product();
             return new Product
             {
                 Id = dto.Id,
-                Name = dto.Name,
-                Description = dto.Description,
+                Name = dto.Name ?? string.Empty,
+                Description = dto.Description ?? string.Empty,
                 Price = dto.Price,
                 Stock = dto.Stock
             };

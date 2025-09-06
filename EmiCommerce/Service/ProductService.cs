@@ -17,24 +17,24 @@ namespace EmiCommerce.Service
         public async Task<IEnumerable<ProductDto>> GetAllAsync()
         {
             var products = await _repo.GetAllAsync();
-            return UserMapper.MapProductsToDto(products);
+            return ProductMapper.MapProductsToDto(products);
         }
         public async Task<ProductDto> GetByIdAsync(int id)
         {
             var product = await _repo.GetByIdAsync(id);
-            return UserMapper.MapProductToDto(product);
+            return ProductMapper.MapProductToDto(product);
         }
         public async Task<ProductDto> AddAsync(ProductDto productDto)
         {
-            var product = UserMapper.MapDtoToProduct(productDto);
+            var product = ProductMapper.MapDtoToProduct(productDto);
             var added = await _repo.AddAsync(product);
-            return UserMapper.MapProductToDto(added);
+            return ProductMapper.MapProductToDto(added);
         }
         public async Task<ProductDto> UpdateAsync(ProductDto productDto)
         {
-            var product = UserMapper.MapDtoToProduct(productDto);
+            var product = ProductMapper.MapDtoToProduct(productDto);
             var updated = await _repo.UpdateAsync(product);
-            return UserMapper.MapProductToDto(updated);
+            return ProductMapper.MapProductToDto(updated);
         }
         public async Task<bool> DeleteAsync(int id)
         {
