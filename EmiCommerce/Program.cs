@@ -48,6 +48,7 @@ builder.Services.AddAuthentication(options =>
 builder.Services.AddControllers();
 
 // 5️⃣ Enable Swagger + JWT Auth
+builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "EmiCommerce API", Version = "v1" });
@@ -96,7 +97,10 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+    });
 }
 
 app.UseHttpsRedirection();
