@@ -92,12 +92,16 @@ builder.Services.AddCors(options =>
     });
 });
 
-// Ensure we don't bind to default port 5000 if it's not explicitly configured
-// This helps avoid conflicts when another process is using 5000.
-var configuredUrls = Environment.GetEnvironmentVariable("ASPNETCORE_URLS");
-if (string.IsNullOrEmpty(configuredUrls))
+// Force Kestrel endpoints in Development to avoid defaulting to port 5000
+if (builder.Environment.IsDevelopment())
 {
-    builder.WebHost.UseUrls("http://localhost:5203");
+    builder.WebHost.ConfigureKestrel(options =>
+    {
+        // HTTP
+        options.ListenLocalhost(5203);
+        // HTTPS (requires dev cert; Visual Studio usually handles this)
+        options.ListenLocalhost(7281, listenOptions => listenOptions.UseHttps());
+    });
 }
 
 
