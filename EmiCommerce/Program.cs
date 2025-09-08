@@ -1,4 +1,4 @@
-﻿using EmiCommerce.Data;
+using EmiCommerce.Data;
 using EmiCommerce.JWTHelper;
 using EmiCommerce.Service;
 using EmiCommerce.Repo;
@@ -92,7 +92,13 @@ builder.Services.AddCors(options =>
     });
 });
 
-// var app = builder.Build();
+// Ensure we don't bind to default port 5000 if it's not explicitly configured
+// This helps avoid conflicts when another process is using 5000.
+var configuredUrls = Environment.GetEnvironmentVariable("ASPNETCORE_URLS");
+if (string.IsNullOrEmpty(configuredUrls))
+{
+    builder.WebHost.UseUrls("http://localhost:5203");
+}
 
 
 // // 6️⃣ Configure Middleware
@@ -126,6 +132,10 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+// Use CORS (Optional)
+app.UseCors("AllowAll");
+
+app.UseAuthentication(); // 🔐 Required for JWT
 app.UseAuthorization();
 
 app.MapControllers();
