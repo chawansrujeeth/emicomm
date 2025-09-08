@@ -1,8 +1,7 @@
-﻿
-using EmiCommerce.Data;
+﻿using EmiCommerce.Data;
 using EmiCommerce.JWTHelper;
-
 using EmiCommerce.Service;
+using EmiCommerce.Repo;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -18,6 +17,8 @@ builder.Services.AddDbContext<MyDbContext>(options =>
 // 2️⃣ Register Services & Repositories
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddSingleton<JwtService>();
 
 // 3️⃣ JWT Authentication Configuration
@@ -91,22 +92,40 @@ builder.Services.AddCors(options =>
     });
 });
 
+// var app = builder.Build();
+
+
+// // 6️⃣ Configure Middleware
+// app.UseSwagger();
+// app.UseSwaggerUI(c =>
+// {
+//     c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+// });
+
+// app.UseHttpsRedirection();
+
+// // Use CORS (Optional)
+// app.UseCors("AllowAll");
+
+// app.UseAuthentication(); // 🔐 Required for JWT
+// app.UseAuthorization();
+
+// app.MapControllers();
+
+// app.Run();
+
+
 var app = builder.Build();
 
-
-// 6️⃣ Configure Middleware
-app.UseSwagger();
-app.UseSwaggerUI(c =>
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
 {
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-});
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
 
 app.UseHttpsRedirection();
 
-// Use CORS (Optional)
-app.UseCors("AllowAll");
-
-app.UseAuthentication(); // 🔐 Required for JWT
 app.UseAuthorization();
 
 app.MapControllers();
