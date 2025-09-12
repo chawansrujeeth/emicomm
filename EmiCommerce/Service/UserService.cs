@@ -53,6 +53,28 @@ namespace EmiCommerce.Service
                 Token = token
             };
         }
+        
+        public async Task<UserDto?> AdminLoginAsync(AdminLoginDto dto)
+        {
+            var user = await _userRepository.GetByUsernameOrEmailAsync(dto.UsernameOrEmail);
+            if (user == null || !VerifyPassword(dto.Password, user.PasswordHash))
+                return null;
+
+            // Ensure only admin role can login through this endpoint
+            if (user.Role != "Admin")
+                return null;
+
+            var token = _jwtService.GenerateToken(user.Id.ToString(), user.Email, user.Role);
+
+            return new UserDto
+            {
+                UserName = user.UserName,
+                Email = user.Email,
+                Role = user.Role,
+                Token = token
+            };
+        }
+        
         private string HashPassword(string password)
         {
             using var sha = SHA256.Create();

@@ -40,5 +40,16 @@ namespace EmiCommerce.Controllers
 
             return Ok(user); 
         }
+
+        // Admin login with username or email
+        [HttpPost("admin-login")]
+        public async Task<IActionResult> AdminLogin([FromBody] AdminLoginDto dto)
+        {
+            var admin = await _userService.AdminLoginAsync(dto);
+            if (admin == null)
+                return Unauthorized("Invalid admin credentials");
+
+            return Ok(admin);
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿using EmiCommerce.Data;
+using EmiCommerce.Data;
 using EmiCommerce.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -41,5 +41,12 @@ public class UserRepository : IUserRepository
     public async Task<UserProfile?> GetProfileByUserIdAsync(Guid userId)
     {
         return await _context.UserProfiles.FirstOrDefaultAsync(p => p.UserId == userId);
+    }
+
+    public async Task<User?> GetByUsernameOrEmailAsync(string usernameOrEmail)
+    {
+        return await _context.Users
+            .AsNoTracking()
+            .FirstOrDefaultAsync(u => u.Email == usernameOrEmail || u.UserName == usernameOrEmail);
     }
 }
