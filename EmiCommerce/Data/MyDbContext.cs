@@ -35,11 +35,13 @@ public partial class MyDbContext : DbContext
             entity.HasKey(e => e.Id).HasName("PK__Users__3214EC07F5AC0F8E");
             entity.HasIndex(e => e.Email, "UQ__Users__A9D105340AD38BCF").IsUnique();
             entity.Property(e => e.Id)
+                .HasColumnName("UserId")
                 .HasDefaultValueSql("(newid())")
                 .ValueGeneratedOnAdd();
             entity.Property(e => e.Email).HasMaxLength(100);
             entity.Property(e => e.Role).HasMaxLength(50);
             entity.Property(e => e.UserName).HasMaxLength(100);
+            entity.Property(e => e.PasswordHash).HasColumnName("Password");
         });
 
         modelBuilder.Entity<UserProfile>(entity =>
