@@ -7,11 +7,13 @@ public static class UserMapper
     {
         return new User
         {
-            UserName = dto.Username,
+            Username = dto.Username,
             Email = dto.Email,
             PasswordHash = passwordHash,
             Role = dto.Role,
-            Phone = dto.Phone
+            Phone = dto.Phone,
+            CreatedAt = DateTime.Now,
+            IsActive = true
         };
     }
 }

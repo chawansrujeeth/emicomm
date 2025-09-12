@@ -26,16 +26,14 @@ public class UserRepository : IUserRepository
 
     public async Task AddUserAsync(User user)
     {
-
         await _context.Users.AddAsync(user);
         await _context.SaveChangesAsync();
     }
-
 
     public async Task<User?> GetByUsernameOrEmailAsync(string usernameOrEmail)
     {
         return await _context.Users
             .AsNoTracking()
-            .FirstOrDefaultAsync(u => u.Email == usernameOrEmail || u.UserName == usernameOrEmail);
+            .FirstOrDefaultAsync(u => u.Email == usernameOrEmail || u.Username == usernameOrEmail);
     }
 }

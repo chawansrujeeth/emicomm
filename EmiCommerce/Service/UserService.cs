@@ -28,7 +28,7 @@ namespace EmiCommerce.Service
 
             return new UserDto
             {
-                UserName = user.UserName,
+                UserName = user.Username,
                 Email = user.Email,
                 Role = user.Role,
                 Token = null 
@@ -40,11 +40,11 @@ namespace EmiCommerce.Service
             if (user == null || !VerifyPassword(dto.Password, user.PasswordHash))
                 return null;
 
-            var token = _jwtService.GenerateToken(user.Id.ToString(), user.Email, user.Role);
+            var token = _jwtService.GenerateToken(user.UserId.ToString(), user.Email, user.Role);
 
             return new UserDto
             {
-                UserName = user.UserName,
+                UserName = user.Username,
                 Email = user.Email,
                 Role = user.Role,
                 Token = token
@@ -61,11 +61,11 @@ namespace EmiCommerce.Service
             if (user.Role != "Admin")
                 return null;
 
-            var token = _jwtService.GenerateToken(user.Id.ToString(), user.Email, user.Role);
+            var token = _jwtService.GenerateToken(user.UserId.ToString(), user.Email, user.Role);
 
             return new UserDto
             {
-                UserName = user.UserName,
+                UserName = user.Username,
                 Email = user.Email,
                 Role = user.Role,
                 Token = token

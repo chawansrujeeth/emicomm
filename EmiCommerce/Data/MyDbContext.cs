@@ -31,15 +31,16 @@ public partial class MyDbContext : DbContext
     {
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Users__3214EC07F5AC0F8E");
-            entity.HasIndex(e => e.Email, "UQ__Users__A9D105340AD38BCF").IsUnique();
-            entity.Property(e => e.Id)
-                .HasColumnName("UserId")
-                .ValueGeneratedOnAdd();
-            entity.Property(e => e.Email).HasMaxLength(100);
-            entity.Property(e => e.Role).HasMaxLength(50);
-            entity.Property(e => e.UserName).HasMaxLength(100);
-            entity.Property(e => e.Phone).HasMaxLength(20);
+            entity.ToTable("Users");
+            entity.HasKey(e => e.UserId);
+            entity.Property(e => e.UserId).ValueGeneratedOnAdd();
+            entity.Property(e => e.Username).HasMaxLength(100).IsRequired();
+            entity.Property(e => e.Email).HasMaxLength(100).IsRequired();
+            entity.Property(e => e.Phone).HasMaxLength(20).IsRequired();
+            entity.Property(e => e.PasswordHash).IsRequired();
+            entity.Property(e => e.Role).HasMaxLength(50).IsRequired();
+            entity.Property(e => e.CreatedAt).HasDefaultValueSql("GETDATE()");
+            entity.Property(e => e.IsActive).HasDefaultValue(true);
         });
 
         OnModelCreatingPartial(modelBuilder);
