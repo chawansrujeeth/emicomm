@@ -7,7 +7,6 @@ public static class UserMapper
     {
         return new User
         {
-            Id = Guid.NewGuid(),
             UserName = dto.Username,
             Email = dto.Email,
             PasswordHash = passwordHash,
@@ -19,7 +18,6 @@ public static class UserMapper
     {
         return new UserProfile
         {
-            Id = Guid.NewGuid(),
             UserId = userId,
             FullName = null, // Not provided in new DTO structure
             MobileNumber = dto.Phone,

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using EmiCommerce.Models;
 using Microsoft.EntityFrameworkCore;
@@ -33,10 +33,10 @@ public partial class MyDbContext : DbContext
         modelBuilder.Entity<User>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__Users__3214EC07F5AC0F8E");
-
             entity.HasIndex(e => e.Email, "UQ__Users__A9D105340AD38BCF").IsUnique();
-
-            entity.Property(e => e.Id).HasDefaultValueSql("(newid())");
+            entity.Property(e => e.Id)
+                .HasDefaultValueSql("(newid())")
+                .ValueGeneratedOnAdd();
             entity.Property(e => e.Email).HasMaxLength(100);
             entity.Property(e => e.Role).HasMaxLength(50);
             entity.Property(e => e.UserName).HasMaxLength(100);
@@ -47,8 +47,9 @@ public partial class MyDbContext : DbContext
             entity.HasKey(e => e.Id).HasName("PK__UserProf__3214EC074DDD1A5C");
 
             entity.ToTable("UserProfile");
-
-            entity.Property(e => e.Id).HasDefaultValueSql("(newid())");
+            entity.Property(e => e.Id)
+                .HasDefaultValueSql("(newid())")
+                .ValueGeneratedOnAdd();
             entity.Property(e => e.Dob).HasColumnName("DOB");
             entity.Property(e => e.FullName).HasMaxLength(100);
             entity.Property(e => e.MobileNumber).HasMaxLength(20);
