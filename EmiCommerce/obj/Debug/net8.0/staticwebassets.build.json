@@ -1,1 +1,11 @@
-{"Version":1,"Hash":"i1sM+ji/lmuqylw61cFkXU2kUN/7rBfmJSsy3GSX2lU=","Source":"EmiCommerce","BasePath":"_content/EmiCommerce","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}
+{
+  "Version": 1,
+  "Hash": "hAmZ0t3aCugl8LV6OJJFzsyGrXvd1hF5iIFnmXdxEHc=",
+  "Source": "EmiCommerce",
+  "BasePath": "_content/EmiCommerce",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

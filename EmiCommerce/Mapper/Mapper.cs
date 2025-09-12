@@ -1,4 +1,4 @@
-﻿using EmiCommerce.DTO;
+using EmiCommerce.DTO;
 using EmiCommerce.Models;
 
 public static class UserMapper
@@ -8,10 +8,10 @@ public static class UserMapper
         return new User
         {
             Id = Guid.NewGuid(),
-            UserName = dto.UserName,
+            UserName = dto.Username,
             Email = dto.Email,
             PasswordHash = passwordHash,
-            Role = "User"
+            Role = dto.Role
         };
     }
 
@@ -21,20 +21,9 @@ public static class UserMapper
         {
             Id = Guid.NewGuid(),
             UserId = userId,
-            FullName = dto.FullName,
-            MobileNumber = dto.MobileNumber,
-            Dob = dto.Dob
-        };
-    }
-    public static User ToUserEntity(RegisterUserDto dto, string passwordHash, string role = "User")
-    {
-        return new User
-        {
-            Id = Guid.NewGuid(),
-            UserName = dto.UserName,
-            Email = dto.Email,
-            PasswordHash = passwordHash,
-            Role = role
+            FullName = null, // Not provided in new DTO structure
+            MobileNumber = dto.Phone,
+            Dob = null // Not provided in new DTO structure
         };
     }
 }

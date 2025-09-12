@@ -1,4 +1,4 @@
-﻿using EmiCommerce.DTO;
+using EmiCommerce.DTO;
 using EmiCommerce.JWTHelper;
 using System.Security.Cryptography;
 using System.Text;
@@ -23,7 +23,7 @@ namespace EmiCommerce.Service
 
             var passwordHash = HashPassword(dto.Password);
 
-            var user = UserMapper.ToUserEntity(dto, passwordHash, role: "User");
+            var user = UserMapper.ToUserEntity(dto, passwordHash);
             await _userRepository.AddUserAsync(user);
 
             var profile = UserMapper.ToUserProfileEntity(dto, user.Id);
@@ -37,32 +37,10 @@ namespace EmiCommerce.Service
                 Token = null 
             };
         }
-        public async Task<UserDto?> ValidateUserAsync(LoginDto dto)
-        {
-            var user = await _userRepository.GetByEmailAsync(dto.Email);
-            if (user == null || !VerifyPassword(dto.Password, user.PasswordHash))
-                return null;
-
-            if (user.Role != "User")
-                return null;
-            var profile = await _userRepository.GetProfileByUserIdAsync(user.Id);
-            if (profile == null)
-                return null;
-
-            var token = _jwtService.GenerateToken(user.Id.ToString(), user.Email, user.Role);
-
-            return new UserDto
-            {
-                UserName = user.UserName,
-                Email = user.Email,
-                Role = user.Role,
-                Token = token
-            };
-        }
-        public async Task<UserDto?> AdminLoginAsync(LoginDto dto)
+        public async Task<UserDto?> LoginAsync(LoginDto dto)
         {
             var user = await _userRepository.GetByEmailOnlyUserAsync(dto.Email);
-            if (user.Role != "Admin")
+            if (user == null || !VerifyPassword(dto.Password, user.PasswordHash))
                 return null;
 
             var token = _jwtService.GenerateToken(user.Id.ToString(), user.Email, user.Role);

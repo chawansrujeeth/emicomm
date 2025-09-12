@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\EmiCommerce.csproj": {}
+    "/Users/chawansrujeeth/Downloads/EmiCommerce/EmiCommerce/EmiCommerce.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\EmiCommerce.csproj": {
+    "/Users/chawansrujeeth/Downloads/EmiCommerce/EmiCommerce/EmiCommerce.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\EmiCommerce.csproj",
+        "projectUniqueName": "/Users/chawansrujeeth/Downloads/EmiCommerce/EmiCommerce/EmiCommerce.csproj",
         "projectName": "EmiCommerce",
-        "projectPath": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\EmiCommerce.csproj",
-        "packagesPath": "C:\\Users\\rakesh.cheepuru\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rakesh.cheepuru\\OneDrive - Qentelli\\Project\\EmiCommerce\\EmiCommerce\\obj\\",
+        "projectPath": "/Users/chawansrujeeth/Downloads/EmiCommerce/EmiCommerce/EmiCommerce.csproj",
+        "packagesPath": "/Users/chawansrujeeth/.nuget/packages/",
+        "outputPath": "/Users/chawansrujeeth/Downloads/EmiCommerce/EmiCommerce/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\rakesh.cheepuru\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/chawansrujeeth/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,35 +32,25 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "EntityFramework": {
-              "target": "Package",
-              "version": "[6.5.1, )"
-            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.19, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[9.0.8, )"
+              "version": "[8.0.8, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.8, )"
+              "version": "[8.0.8, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -92,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet@8/8.0.120/libexec/sdk/8.0.120/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

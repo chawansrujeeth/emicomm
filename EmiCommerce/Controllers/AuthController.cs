@@ -1,11 +1,11 @@
-﻿using EmiCommerce.DTO;
+using EmiCommerce.DTO;
 using EmiCommerce.Service;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EmiCommerce.Controllers
 {
     [ApiController]
-    [Route("Register/Login")]
+    [Route("api/Auth")]
     public class AuthController : ControllerBase
     {
         private readonly IUserService _userService;
@@ -15,34 +15,30 @@ namespace EmiCommerce.Controllers
             _userService = userService;
         }
 
-        // Register user 
+        // Register user with role
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterUserDto dto)
         {
-            var user = await _userService.RegisterAsync(dto);
-            return Ok(user);
+            try
+            {
+                var user = await _userService.RegisterAsync(dto);
+                return Ok(user);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
-        // User login 
+        // Role-based login 
         [HttpPost("login")]
-        public async Task<IActionResult> UserLogin([FromBody] LoginDto dto)
+        public async Task<IActionResult> Login([FromBody] LoginDto dto)
         {
-            var user = await _userService.ValidateUserAsync(dto);
+            var user = await _userService.LoginAsync(dto);
             if (user == null)
-                return Unauthorized("Invalid user credentials");
+                return Unauthorized("Invalid credentials");
 
             return Ok(user); 
-        }
-
-        // Admin login 
-        [HttpPost("admin/login")]
-        public async Task<IActionResult> AdminLogin([FromBody] LoginDto dto)
-        {
-            var admin = await _userService.AdminLoginAsync(dto);
-            if (admin == null)
-                return Unauthorized("Invalid admin credentials");
-
-            return Ok(admin); 
         }
     }
 }
