@@ -36,12 +36,10 @@ public partial class MyDbContext : DbContext
             entity.HasIndex(e => e.Email, "UQ__Users__A9D105340AD38BCF").IsUnique();
             entity.Property(e => e.Id)
                 .HasColumnName("UserId")
-                .HasDefaultValueSql("(newid())")
                 .ValueGeneratedOnAdd();
             entity.Property(e => e.Email).HasMaxLength(100);
             entity.Property(e => e.Role).HasMaxLength(50);
             entity.Property(e => e.UserName).HasMaxLength(100);
-            entity.Property(e => e.PasswordHash).HasColumnName("Password");
         });
 
         modelBuilder.Entity<UserProfile>(entity =>
@@ -50,7 +48,6 @@ public partial class MyDbContext : DbContext
 
             entity.ToTable("UserProfile");
             entity.Property(e => e.Id)
-                .HasDefaultValueSql("(newid())")
                 .ValueGeneratedOnAdd();
             entity.Property(e => e.Dob).HasColumnName("DOB");
             entity.Property(e => e.FullName).HasMaxLength(100);

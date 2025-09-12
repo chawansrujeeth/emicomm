@@ -14,7 +14,7 @@ public static class UserMapper
         };
     }
 
-    public static UserProfile ToUserProfileEntity(RegisterUserDto dto, Guid userId)
+    public static UserProfile ToUserProfileEntity(RegisterUserDto dto, int userId)
     {
         return new UserProfile
         {

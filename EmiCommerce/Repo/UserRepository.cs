@@ -38,7 +38,7 @@ public class UserRepository : IUserRepository
         await _context.SaveChangesAsync();
     }
 
-    public async Task<UserProfile?> GetProfileByUserIdAsync(Guid userId)
+    public async Task<UserProfile?> GetProfileByUserIdAsync(int userId)
     {
         return await _context.UserProfiles.FirstOrDefaultAsync(p => p.UserId == userId);
     }

@@ -7,5 +7,5 @@ public interface IUserRepository
     Task<User?> GetByUsernameOrEmailAsync(string usernameOrEmail);
     Task AddUserAsync(User user);
     Task AddUserProfileAsync(UserProfile profile);
-    Task<UserProfile?> GetProfileByUserIdAsync(Guid userId); 
+    Task<UserProfile?> GetProfileByUserIdAsync(int userId); 
 }
