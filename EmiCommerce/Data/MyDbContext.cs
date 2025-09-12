@@ -33,13 +33,16 @@ public partial class MyDbContext : DbContext
         {
             entity.ToTable("Users");
             entity.HasKey(e => e.UserId);
-            entity.Property(e => e.UserId).ValueGeneratedOnAdd();
+            entity.Property(e => e.UserId)
+                .UseIdentityColumn();
             entity.Property(e => e.Username).HasMaxLength(100).IsRequired();
             entity.Property(e => e.Email).HasMaxLength(100).IsRequired();
             entity.Property(e => e.Phone).HasMaxLength(20).IsRequired();
             entity.Property(e => e.PasswordHash).IsRequired();
             entity.Property(e => e.Role).HasMaxLength(50).IsRequired();
-            entity.Property(e => e.CreatedAt).HasDefaultValueSql("GETDATE()");
+            entity.Property(e => e.CreatedAt)
+                .HasDefaultValueSql("GETDATE()")
+                .ValueGeneratedOnAdd();
             entity.Property(e => e.IsActive).HasDefaultValue(true);
         });
 

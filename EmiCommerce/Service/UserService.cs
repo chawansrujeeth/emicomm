@@ -17,9 +17,18 @@ namespace EmiCommerce.Service
         }
         public async Task<UserDto> RegisterAsync(RegisterUserDto dto)
         {
+            // Duplicate checks to align with DB constraints and prevent SaveChanges errors
             var existingUser = await _userRepository.GetByEmailAsync(dto.Email);
             if (existingUser != null)
                 throw new Exception("Email already exists");
+
+            var existingUsername = await _userRepository.GetByUsernameAsync(dto.Username);
+            if (existingUsername != null)
+                throw new Exception("Username already exists");
+
+            var existingPhone = await _userRepository.GetByPhoneAsync(dto.Phone);
+            if (existingPhone != null)
+                throw new Exception("Phone already exists");
 
             var passwordHash = HashPassword(dto.Password);
 

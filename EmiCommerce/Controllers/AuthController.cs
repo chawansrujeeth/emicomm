@@ -26,7 +26,10 @@ namespace EmiCommerce.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                var msg = ex.InnerException?.InnerException?.Message
+                          ?? ex.InnerException?.Message
+                          ?? ex.Message;
+                return BadRequest(msg);
             }
         }
 
