@@ -14,7 +14,6 @@ public class UserRepository : IUserRepository
     public async Task<User?> GetByEmailAsync(string email)
     {
         return await _context.Users
-            .Include(u => u.UserProfiles)
             .FirstOrDefaultAsync(u => u.Email == email);
     }
 
@@ -32,16 +31,6 @@ public class UserRepository : IUserRepository
         await _context.SaveChangesAsync();
     }
 
-    public async Task AddUserProfileAsync(UserProfile profile)
-    {
-        await _context.UserProfiles.AddAsync(profile);
-        await _context.SaveChangesAsync();
-    }
-
-    public async Task<UserProfile?> GetProfileByUserIdAsync(int userId)
-    {
-        return await _context.UserProfiles.FirstOrDefaultAsync(p => p.UserId == userId);
-    }
 
     public async Task<User?> GetByUsernameOrEmailAsync(string usernameOrEmail)
     {

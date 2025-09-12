@@ -10,18 +10,8 @@ public static class UserMapper
             UserName = dto.Username,
             Email = dto.Email,
             PasswordHash = passwordHash,
-            Role = dto.Role
-        };
-    }
-
-    public static UserProfile ToUserProfileEntity(RegisterUserDto dto, int userId)
-    {
-        return new UserProfile
-        {
-            UserId = userId,
-            FullName = null, // Not provided in new DTO structure
-            MobileNumber = dto.Phone,
-            Dob = null // Not provided in new DTO structure
+            Role = dto.Role,
+            Phone = dto.Phone
         };
     }
 }

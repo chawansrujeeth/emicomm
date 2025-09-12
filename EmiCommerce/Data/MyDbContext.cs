@@ -18,7 +18,6 @@ public partial class MyDbContext : DbContext
 
     public virtual DbSet<User> Users { get; set; }
 
-    public virtual DbSet<UserProfile> UserProfiles { get; set; }
 
     public virtual DbSet<Product> Products { get; set; }
 
@@ -40,22 +39,7 @@ public partial class MyDbContext : DbContext
             entity.Property(e => e.Email).HasMaxLength(100);
             entity.Property(e => e.Role).HasMaxLength(50);
             entity.Property(e => e.UserName).HasMaxLength(100);
-        });
-
-        modelBuilder.Entity<UserProfile>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("PK__UserProf__3214EC074DDD1A5C");
-
-            entity.ToTable("UserProfile");
-            entity.Property(e => e.Id)
-                .ValueGeneratedOnAdd();
-            entity.Property(e => e.Dob).HasColumnName("DOB");
-            entity.Property(e => e.FullName).HasMaxLength(100);
-            entity.Property(e => e.MobileNumber).HasMaxLength(20);
-
-            entity.HasOne(d => d.User).WithMany(p => p.UserProfiles)
-                .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__UserProfi__UserI__3C69FB99");
+            entity.Property(e => e.Phone).HasMaxLength(20);
         });
 
         OnModelCreatingPartial(modelBuilder);

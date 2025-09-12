@@ -26,9 +26,6 @@ namespace EmiCommerce.Service
             var user = UserMapper.ToUserEntity(dto, passwordHash);
             await _userRepository.AddUserAsync(user);
 
-            var profile = UserMapper.ToUserProfileEntity(dto, user.Id);
-            await _userRepository.AddUserProfileAsync(profile);
-
             return new UserDto
             {
                 UserName = user.UserName,
