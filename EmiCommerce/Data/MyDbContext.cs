@@ -40,10 +40,15 @@ public partial class MyDbContext : DbContext
             entity.Property(e => e.Phone).HasMaxLength(20).IsRequired();
             entity.Property(e => e.PasswordHash).IsRequired();
             entity.Property(e => e.Role).HasMaxLength(50).IsRequired();
+            // Ensure values are provided by the app and included in INSERT
             entity.Property(e => e.CreatedAt)
-                .HasDefaultValueSql("GETDATE()")
-                .ValueGeneratedOnAdd();
-            entity.Property(e => e.IsActive).HasDefaultValue(true);
+                .HasColumnType("datetime")
+                .IsRequired()
+                .ValueGeneratedNever();
+            entity.Property(e => e.IsActive)
+                .HasColumnType("bit")
+                .IsRequired()
+                .ValueGeneratedNever();
         });
 
         OnModelCreatingPartial(modelBuilder);
