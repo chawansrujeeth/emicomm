@@ -33,6 +33,7 @@ namespace EmiCommerce.Service
             var passwordHash = HashPassword(dto.Password);
 
             var user = UserMapper.ToUserEntity(dto, passwordHash);
+            user.IsActive = true; // ensure non-nullable value for DB insert
             await _userRepository.AddUserAsync(user);
 
             return new UserDto
