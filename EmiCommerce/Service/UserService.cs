@@ -36,12 +36,14 @@ namespace EmiCommerce.Service
             user.IsActive = true; // ensure non-nullable value for DB insert
             await _userRepository.AddUserAsync(user);
 
+            var tokenOnRegister = _jwtService.GenerateToken(user.UserId, user.Username, user.Role, user.Email);
+
             return new UserDto
             {
                 UserName = user.Username,
                 Email = user.Email,
                 Role = user.Role,
-                Token = null 
+                Token = tokenOnRegister
             };
         }
         public async Task<UserDto?> LoginAsync(LoginDto dto)
@@ -50,7 +52,7 @@ namespace EmiCommerce.Service
             if (user == null || !VerifyPassword(dto.Password, user.PasswordHash))
                 return null;
 
-            var token = _jwtService.GenerateToken(user.UserId.ToString(), user.Email, user.Role);
+            var token = _jwtService.GenerateToken(user.UserId, user.Username, user.Role, user.Email);
 
             return new UserDto
             {
@@ -71,7 +73,7 @@ namespace EmiCommerce.Service
             if (user.Role != "Admin")
                 return null;
 
-            var token = _jwtService.GenerateToken(user.UserId.ToString(), user.Email, user.Role);
+            var token = _jwtService.GenerateToken(user.UserId, user.Username, user.Role, user.Email);
 
             return new UserDto
             {
