@@ -51,6 +51,22 @@ public partial class MyDbContext : DbContext
                 .ValueGeneratedNever();
         });
 
+        modelBuilder.Entity<Product>(entity =>
+        {
+            entity.ToTable("Products");
+            entity.HasKey(e => e.Id);
+            entity.Property(e => e.Id)
+                .UseIdentityColumn();
+            entity.Property(e => e.Name).HasMaxLength(200).IsRequired();
+            entity.Property(e => e.Description).HasMaxLength(1000);
+            entity.Property(e => e.Price).HasColumnType("decimal(18,2)").IsRequired();
+            entity.Property(e => e.Stock).IsRequired();
+            entity.Property(e => e.CreatedAt)
+                .HasColumnType("datetime")
+                .IsRequired()
+                .ValueGeneratedNever();
+        });
+
         OnModelCreatingPartial(modelBuilder);
     }
 

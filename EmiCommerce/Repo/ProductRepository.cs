@@ -20,7 +20,7 @@ namespace EmiCommerce.Repo
         }
         public async Task<Product> GetByIdAsync(int id)
         {
-            return await _context.Products.FindAsync(id);
+            return await _context.Products.FindAsync(id) ?? new Product();
         }
         public async Task<Product> AddAsync(Product product)
         {

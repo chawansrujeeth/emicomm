@@ -27,6 +27,7 @@ namespace EmiCommerce.Service
         public async Task<ProductDto> AddAsync(ProductDto productDto)
         {
             var product = ProductMapper.MapDtoToProduct(productDto);
+            product.CreatedAt = DateTime.Now; // Ensure CreatedAt is set for new products
             var added = await _repo.AddAsync(product);
             return ProductMapper.MapProductToDto(added);
         }
