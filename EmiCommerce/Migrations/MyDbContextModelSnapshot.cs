@@ -72,7 +72,7 @@ namespace EmiCommerce.Migrations
 
                     b.HasKey("CartId");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("UserId").IsUnique();
 
                     b.ToTable("Carts", (string)null);
                 });
@@ -106,7 +106,13 @@ namespace EmiCommerce.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("CartItems", (string)null);
+                    b.HasIndex("CartId", "ProductId").IsUnique();
+
+                    b.ToTable("CartItems", (string)null, t =>
+                    {
+                        t.HasCheckConstraint("CK_CartItem_Quantity_Positive", "[Quantity] > 0");
+                        t.HasCheckConstraint("CK_CartItem_UnitPrice_NonNegative", "[UnitPrice] >= 0");
+                    });
                 });
 
             modelBuilder.Entity("EmiCommerce.Models.User", b =>

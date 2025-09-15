@@ -64,7 +64,8 @@ namespace EmiCommerce.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Carts_UserId",
                 table: "Carts",
-                column: "UserId");
+                column: "UserId",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_CartItems_CartId",
@@ -75,6 +76,24 @@ namespace EmiCommerce.Migrations
                 name: "IX_CartItems_ProductId",
                 table: "CartItems",
                 column: "ProductId");
+
+            // Composite unique index to ensure one product per cart
+            migrationBuilder.CreateIndex(
+                name: "IX_CartItems_CartId_ProductId",
+                table: "CartItems",
+                columns: new[] { "CartId", "ProductId" },
+                unique: true);
+
+            // Check constraints for data integrity
+            migrationBuilder.AddCheckConstraint(
+                name: "CK_CartItem_Quantity_Positive",
+                table: "CartItems",
+                sql: "[Quantity] > 0");
+
+            migrationBuilder.AddCheckConstraint(
+                name: "CK_CartItem_UnitPrice_NonNegative",
+                table: "CartItems",
+                sql: "[UnitPrice] >= 0");
         }
 
         /// <inheritdoc />

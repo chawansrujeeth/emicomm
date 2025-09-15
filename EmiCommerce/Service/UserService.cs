@@ -9,11 +9,13 @@ namespace EmiCommerce.Service
     {
         private readonly IUserRepository _userRepository;
         private readonly JwtService _jwtService;
+        private readonly ICartService _cartService;
 
-        public UserService(IUserRepository userRepository, JwtService jwtService)
+        public UserService(IUserRepository userRepository, JwtService jwtService, ICartService cartService)
         {
             _userRepository = userRepository;
             _jwtService = jwtService;
+            _cartService = cartService;
         }
         public async Task<UserDto> RegisterAsync(RegisterUserDto dto)
         {
@@ -36,6 +38,9 @@ namespace EmiCommerce.Service
             user.IsActive = true; // ensure non-nullable value for DB insert
             await _userRepository.AddUserAsync(user);
 
+            // Ensure a cart exists for this user
+            await _cartService.GetOrCreateCartAsync(user.UserId);
+
             var tokenOnRegister = _jwtService.GenerateToken(user.UserId, user.Username, user.Role, user.Email);
 
             return new UserDto
@@ -51,6 +56,9 @@ namespace EmiCommerce.Service
             var user = await _userRepository.GetByEmailOnlyUserAsync(dto.Email);
             if (user == null || !VerifyPassword(dto.Password, user.PasswordHash))
                 return null;
+
+            // Ensure a cart exists for this user
+            await _cartService.GetOrCreateCartAsync(user.UserId);
 
             var token = _jwtService.GenerateToken(user.UserId, user.Username, user.Role, user.Email);
 

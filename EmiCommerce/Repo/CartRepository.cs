@@ -29,8 +29,8 @@ namespace EmiCommerce.Repo
             var cart = new Cart
             {
                 UserId = userId,
-                CreatedAt = DateTime.Now,
-                UpdatedAt = DateTime.Now
+                CreatedAt = DateTime.UtcNow,
+                UpdatedAt = DateTime.UtcNow
             };
 
             _context.Carts.Add(cart);
@@ -53,7 +53,7 @@ namespace EmiCommerce.Repo
             var cart = await _context.Carts.FindAsync(cartItem.CartId);
             if (cart != null)
             {
-                cart.UpdatedAt = DateTime.Now;
+                cart.UpdatedAt = DateTime.UtcNow;
                 await _context.SaveChangesAsync();
             }
             
@@ -69,7 +69,7 @@ namespace EmiCommerce.Repo
             var cart = await _context.Carts.FindAsync(cartItem.CartId);
             if (cart != null)
             {
-                cart.UpdatedAt = DateTime.Now;
+                cart.UpdatedAt = DateTime.UtcNow;
                 await _context.SaveChangesAsync();
             }
             
@@ -89,7 +89,7 @@ namespace EmiCommerce.Repo
             var cart = await _context.Carts.FindAsync(cartId);
             if (cart != null)
             {
-                cart.UpdatedAt = DateTime.Now;
+                cart.UpdatedAt = DateTime.UtcNow;
                 await _context.SaveChangesAsync();
             }
             
@@ -111,7 +111,7 @@ namespace EmiCommerce.Repo
             var cart = await _context.Carts.FindAsync(cartId);
             if (cart != null)
             {
-                cart.UpdatedAt = DateTime.Now;
+                cart.UpdatedAt = DateTime.UtcNow;
                 await _context.SaveChangesAsync();
             }
             

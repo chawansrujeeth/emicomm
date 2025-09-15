@@ -77,6 +77,7 @@ public partial class MyDbContext : DbContext
             entity.Property(e => e.CartId)
                 .UseIdentityColumn();
             entity.Property(e => e.UserId).IsRequired();
+            entity.HasIndex(e => e.UserId).IsUnique();
             entity.Property(e => e.CreatedAt)
                 .HasColumnType("datetime")
                 .IsRequired()
@@ -107,6 +108,11 @@ public partial class MyDbContext : DbContext
                 .HasColumnType("datetime")
                 .IsRequired()
                 .ValueGeneratedNever();
+            
+            // Indexes & constraints
+            entity.HasIndex(e => new { e.CartId, e.ProductId }).IsUnique();
+            entity.HasCheckConstraint("CK_CartItem_Quantity_Positive", "[Quantity] > 0");
+            entity.HasCheckConstraint("CK_CartItem_UnitPrice_NonNegative", "[UnitPrice] >= 0");
             
             // Foreign key relationships
             entity.HasOne(d => d.Cart)

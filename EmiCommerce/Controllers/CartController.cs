@@ -35,7 +35,7 @@ namespace EmiCommerce.Controllers
             try
             {
                 var userId = GetCurrentUserId();
-                var cart = await _cartService.GetCartAsync(userId);
+                var cart = await _cartService.GetOrCreateCartAsync(userId);
                 return Ok(cart);
             }
             catch (UnauthorizedAccessException ex)

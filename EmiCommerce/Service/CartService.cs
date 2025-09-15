@@ -76,7 +76,7 @@ namespace EmiCommerce.Service
                     ProductId = addToCartDto.ProductId,
                     Quantity = addToCartDto.Quantity,
                     UnitPrice = product.Price,
-                    AddedAt = DateTime.Now
+                    AddedAt = DateTime.UtcNow
                 };
                 
                 await _cartRepository.AddCartItemAsync(cartItem);
