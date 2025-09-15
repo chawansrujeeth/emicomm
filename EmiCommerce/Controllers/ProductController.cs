@@ -16,12 +16,15 @@ namespace EmiCommerce.Controllers
             _service = service;
         }
         [HttpGet]
+        [AllowAnonymous] // Allow anyone to view all products
         public async Task<IActionResult> GetAll()
         {
             var products = await _service.GetAllAsync();
             return Ok(products);
         }
+        
         [HttpGet("{id}")]
+        [AllowAnonymous] // Allow anyone to view individual products
         public async Task<IActionResult> GetById(int id)
         {
             var product = await _service.GetByIdAsync(id);
