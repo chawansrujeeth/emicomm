@@ -112,17 +112,17 @@ namespace EmiCommerce.Controllers
             }
         }
 
-        [HttpDelete("remove/{cartItemId}")]
-        public async Task<IActionResult> RemoveFromCart(int cartItemId)
+        [HttpDelete("remove/{productId}")]
+        public async Task<IActionResult> RemoveFromCart(int productId)
         {
             try
             {
                 var userId = GetCurrentUserId();
-                var result = await _cartService.RemoveFromCartAsync(userId, cartItemId);
+                var result = await _cartService.RemoveFromCartAsync(userId, productId);
                 
                 if (!result)
                 {
-                    return NotFound("Cart item not found");
+                    return NotFound("Product not found in cart");
                 }
                 
                 return Ok(new { message = "Item removed from cart successfully" });

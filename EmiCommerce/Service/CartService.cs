@@ -113,7 +113,7 @@ namespace EmiCommerce.Service
             return await GetCartAsync(userId);
         }
 
-        public async Task<bool> RemoveFromCartAsync(int userId, int cartItemId)
+        public async Task<bool> RemoveFromCartAsync(int userId, int productId)
         {
             var cart = await _cartRepository.GetCartByUserIdAsync(userId);
             if (cart == null)
@@ -121,13 +121,13 @@ namespace EmiCommerce.Service
                 return false;
             }
 
-            var cartItem = cart.CartItems.FirstOrDefault(ci => ci.CartItemId == cartItemId);
+            var cartItem = await _cartRepository.GetCartItemAsync(cart.CartId, productId);
             if (cartItem == null)
             {
                 return false;
             }
 
-            return await _cartRepository.RemoveCartItemAsync(cartItemId);
+            return await _cartRepository.RemoveCartItemAsync(cartItem.CartItemId);
         }
 
         public async Task<bool> ClearCartAsync(int userId)
